@@ -1,6 +1,7 @@
 //files in the public folder
 const FILES_TO_CACHE = [
   "/",
+  "/index.js",
   "/index.html",
   "/db.js",
   "/icons/icon-192x192.png",
