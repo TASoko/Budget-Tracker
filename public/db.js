@@ -1,9 +1,12 @@
 let db;
 // create a new db request for a "budget" database.
+// this database is used when the app goes offline
 const request = indexedDB.open("budget", 1);
 
 request.onupgradeneeded = function (event) {
   // create object store called "pending" and set autoIncrement to true
+  // this is where the new transactions will be stored offline. 
+  //it will clear once the app is back online and the page is refreshed
   const db = event.target.result;
   db.createObjectStore("pending", { autoIncrement: true });
 };
