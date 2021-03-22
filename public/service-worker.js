@@ -1,3 +1,4 @@
+//files in the public folder
 const FILES_TO_CACHE = [
   "/",
   "/index.html",
