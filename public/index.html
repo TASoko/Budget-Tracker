@@ -45,5 +45,14 @@
   <script src="/db.js"></script>
   <!--In order to have the feature of a transcation stored in a databse while offline and then pushed up I need to call the file in the index.html-->
   <script src="index.js"></script>
+            <script>
+              if ("serviceWorker" in navigator) {
+                window.addEventListener("load", () => {
+                  navigator.serviceWorker.register("service-worker.js").then(reg => {
+                    console.log("We found your service worker file!", reg);
+                  });
+                });
+              }
+            </script>
 </body>
 </html>
