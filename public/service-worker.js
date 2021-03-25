@@ -17,7 +17,6 @@ self.addEventListener("install", (event) => {
     caches
       .open(PRECACHE)
       .then((cache) => cache.addAll(FILES_TO_CACHE))
-      .then(self.skipWaiting())
   );
 });
 
